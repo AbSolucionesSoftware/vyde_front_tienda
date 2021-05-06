@@ -6,7 +6,7 @@ import { Form, Input, Button, Result, notification, Alert } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Spin from '../../../../components/Spin';
-
+import tokenEstados from '../../../../config/tokenEstados'
 
 import '../confirmacion.scss';
 
@@ -150,7 +150,7 @@ export default function Traer_datos(props) {
 			});
 		}else{
 			consultaCodigos
-			.get(`/info_cp/${datosFormulario.cp}`)
+			.get(`/info_cp/${datosFormulario.cp}?token=${tokenEstados}`)
 			.then((res) => {
 			const data = res.data[0].response.municipio;
 				clienteAxios

@@ -185,7 +185,7 @@ function MostrarRegistroTienda(props) {
 								Anterior
 							</Button>
 						)}
-						{current < 3 && (
+						{current < 4 && (
 							<Button className="mx-1" type="primary" onClick={() => next()} disabled={!datosNegocio}>
 								Siguiente
 							</Button>
