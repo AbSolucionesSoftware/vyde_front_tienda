@@ -1,5 +1,6 @@
 .container-imagenes{
-    margin-top: 22px;
+    margin-top: 22px; 
+    padding: 0%!important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +18,8 @@
     max-height: 100%;
 }
 .container-banner-triple{
-    height: 530px;
-    width: 360px;
+    height: 270px;
+    width: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +36,8 @@
         // width: 350px;
     }
     .container-banner-triple{
-        height: 460px;
-        width: 280px;
+        height: 250px;
+        width: 350px;
     }
     .size-col{
         min-width: 10px;

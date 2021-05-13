@@ -68,6 +68,7 @@ const Navegacion = (props) => {
 			backgroundColor: colores.navSecondary.background
 		}
 	});
+
 	const classes = useStyles();
 
 	if (loading) {
@@ -121,22 +122,58 @@ const Navegacion = (props) => {
 			</Layout>
 			{/* DIVISOR PARA EL INPUT  */}
 
-			<Layout className="layout  a0">
+			<Layout className="layout a0">
 				<Header className={'a1 ' + classes.background}>
 					<div className="menuCon a2">
 						<div className="top-menu row a3">
-							<div className="col-lg-5">
-								<Categorias />
+							
+							{/* INICIO OFERTAS Y PRODCUTOS */}
+							<div className="col-lg-5 row a4 containe-categorias d-flex 	ml-2 justify-content-start">
+								<Menu
+									className={'float-right navbar-menu-sesion a50 ' + classes.background}
+									/* theme="light" */
+									mode="horizontal"
+									defaultSelectedKeys={[ window.location.pathname ]}
+									inlineindent={0}
+								>
+									<Menu.Item
+										className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
+										key="/"
+									>
+										<div className="centrar-nav">Inicio</div>
+										<Link to="/" />
+									</Menu.Item>
+									<Menu.Item
+										className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
+										key="/productos"
+									>
+										<div className="centrar-nav">Productos</div>
+										<Link to="/productos" />
+									</Menu.Item>
+										{datosContx.ofertas ? (
+											<Menu.Item
+												className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
+												key="/ofertas"
+											>
+												<div className="centrar-nav">Ofertas</div>
+												<Link to="/ofertas" />
+											</Menu.Item>
+										) : (
+											<Menu.Item className="d-none" />
+										)}
+									</Menu>
 							</div>
-							<div className="col-lg-2 row-logo-search">
+
+							 {/* IMAGEN DE LOCO CENTRO  */}
+							<div className="col-lg-2 row-logo-search text-center">
 								<div className="row row-logo-search-2 ">
 									{datosContx.tienda && datosContx.tienda.length > 0 ? !datosContx.tienda[0]
 										.imagenLogo ? (
 										<div className="d-none" />
 									) : (
-										<div className="col-lg-3">
+										<div className="text-center">
 											<Link to="/">
-												<div className="contenedor-logo">
+												<div className="contenedor-logo text-center">
 													<img
 														className="imagen-logo-principal"
 														alt="logotipo-tienda"
@@ -160,33 +197,6 @@ const Navegacion = (props) => {
 									defaultSelectedKeys={[ window.location.pathname ]}
 									inlineindent={0}
 								>
-									{/* COSAS IRRELEVANTES */}
-									<Menu.Item
-										className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
-										key="/"
-									>
-										<div className="centrar-nav">Inicio</div>
-										<Link to="/" />
-									</Menu.Item>
-									<Menu.Item
-										className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
-										key="/productos"
-									>
-										<div className="centrar-nav">Productos</div>
-										<Link to="/productos" />
-									</Menu.Item>
-									{datosContx.ofertas ? (
-										<Menu.Item
-											className={'nav-font-color nav-border-color font-nav a6 ' + classes.hover}
-											key="/ofertas"
-										>
-											<div className="centrar-nav">Ofertas</div>
-											<Link to="/ofertas" />
-										</Menu.Item>
-									) : (
-										<Menu.Item className="d-none" />
-									)}
-
 									{/* INICIO DE CARRITO */}
 									{!decoded || decoded.rol === true ? (
 										<Menu.Item key="" className="d-none" />
@@ -294,8 +304,10 @@ const Navegacion = (props) => {
 									)}
 								</Menu>
 							</div>
+							
 							{/* FIN DE AVATAR, TU CARRITO Y ENTRAR  */}
 						</div>
+						
 						<div className="top-menu-responsive">
 							<Button type="link" className="barsMenu" onClick={showDrawer}>
 								<MenuOutlined className={"menu-responsivo-icon " + classes.background} style={{ fontSize: 22 }} />
@@ -350,7 +362,19 @@ const Navegacion = (props) => {
 				</Header>
 			</Layout>
 
-			<div className="d-none d-lg-block ">
+			<Layout className="layout navbar-menu-general a00">
+				<Header className=" a1">
+					<div className="menuCon a2">
+						<div className="top-menu row a3 container-prin">
+							<div className={'col-lg-12 container-pages a4 text-center ' + classes.background}>
+								<Categorias />
+							</div>
+						</div>
+					</div>
+				</Header>
+			</Layout>
+
+			{/* <div className="d-none d-lg-block ">
 				<Layout className="layout a01 ">
 					<Header className={"fondo-search a1 " + classes.navSecondary}>
 						<div className="menuCon a2">
@@ -371,7 +395,7 @@ const Navegacion = (props) => {
 						</div>
 					</Header>
 				</Layout>
-			</div>
+			</div> */}
 		</div>
 	);
 };

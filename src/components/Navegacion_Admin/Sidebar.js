@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Layout, Menu, Button } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
 import './sidebar.scss';
@@ -16,6 +16,7 @@ import {
 	HomeOutlined,
 	TeamOutlined
 } from '@ant-design/icons';
+import{ MenuContext } from '../../context/carritoContext';
 
 const { Sider } = Layout;
 const token = localStorage.getItem('token');
@@ -30,6 +31,10 @@ function parseJwt(token) {
 }
 
 const Sidebar = (props) => {
+
+
+	const { setUpload } = useContext(MenuContext);
+
 	return (
 		<Sider
 			style={{ height: '100vh' }}
@@ -82,8 +87,8 @@ const Sidebar = (props) => {
 				<Menu.Item key="/admin/blog" icon={<EditOutlined />}>
 					Blog<Link to="/admin/blog" />
 				</Menu.Item>
-				<Menu.Item icon={<HomeOutlined />}>
-					Pagina principal<Link to="/" />
+				<Menu.Item icon={<HomeOutlined />} onClick={ ()=> { setUpload(true) }}>
+					Pagina principal<Link to="/" /> 
 				</Menu.Item>
 				<Menu.Item icon={<PoweroffOutlined />}>
 					<Button
@@ -91,6 +96,7 @@ const Sidebar = (props) => {
 						onClick={() => {
 							localStorage.removeItem('token');
 							props.history.push('/');
+							setUpload(true);
 						}}
 						danger
 					>

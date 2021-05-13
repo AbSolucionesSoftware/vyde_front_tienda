@@ -10,6 +10,7 @@ import { MenuContext } from '../../context/carritoContext';
 // import jwt_decode from 'jwt-decode';
 import ColorCustomizer from '../Colors/colores';
 import { makeStyles } from '@material-ui/styles';
+import Categorias from '../Categorias/Categorias';
 
 export default function LayoutBasic(props) {
 	const { routes } = props;
@@ -96,7 +97,7 @@ export default function LayoutBasic(props) {
 						</Content>
 					</Layout>
 				</div>
-				<Footer className="foot" style={{ margin: 0, padding: 0 }}>
+				<Footer  className="foot mt-3" style={{ margin: 0, padding: 0 }}>
 					<FooterPage style={{ margin: 0, padding: 0 }} />
 				</Footer>
 			</Layout>

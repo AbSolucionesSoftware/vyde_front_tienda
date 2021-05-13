@@ -8,26 +8,42 @@
   background-color: white;
 }
 .contenedor-logo{
-  margin-left: 20%;
+  // margin-left: 20%;
   height: 85px;
   width: 195px;
   display: flex;
   justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
   align-items: center;
 }
 
 .contenedor-logo > a{
   // width: 100%;
   // height: auto;
+  // display: flex;
+  // flex-flow: column wrap;
   display: flex;
-  flex-flow: column wrap;
   justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
   align-items: center;
 }
 
 .imagen-logo-principal{
   max-width: 100%;
   max-height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .top-menu{
@@ -49,20 +65,32 @@
 /* TAMAÑOS NAV PRINCIPAL */
 .row-logo-search{
   height: 100%!important;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  align-items: center;
 }
 .row-logo-search-2{
   display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
   align-items: center;
 }
 
 .a00{
-  height: 10px;
+  height: 30px;
 }
 .a01{
   height: 50px;
 }
 .a0{
-  height: 90px;
+  height: 75px;
   font-weight: bold;
 }
 
@@ -82,7 +110,7 @@
 }
 //el a4 separa arriba del input
 .a4{
-  height: 25px;
+  height: 35px;
 }
 .a5{
   height: 100%;

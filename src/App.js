@@ -9,11 +9,11 @@ import { MenuContext } from './context/carritoContext';
 import clienteAxios from './config/axios';
 import jwt_decode from 'jwt-decode';
 
-import './scss/disenoDos.scss';
+import './scss/disenoVyde.scss';
 
 export default function App() {
 
-	const { setDatosContx, setLoading, active, setColores } = useContext(MenuContext);
+	const { setDatosContx, setLoading, active, upload, setUpload, setColores,  } = useContext(MenuContext);
 	const [nombreTienda, setNombreTienda] = useState('');
 	var decoded = { _id: '' };
 	const token = localStorage.getItem('token');
@@ -82,8 +82,9 @@ export default function App() {
 	useEffect(
 		() => {
 			obtenerInformacionTienda();
+			setUpload(false);
 		},
-		[ obtenerInformacionTienda, active ]
+		[ obtenerInformacionTienda, active, upload]
 	);
 
 	return (
