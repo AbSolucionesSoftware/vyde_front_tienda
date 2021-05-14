@@ -334,6 +334,7 @@ p, a, li{
 .font-cates{
     font-size: 20px;
     text-transform: uppercase;
+    letter-spacing: 2px;
     // font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
@@ -347,24 +348,31 @@ p, a, li{
 //VARIABLES DE TITULOS GENERALES PARA TODA LA PAGINA
 .font-prin{
     font-size: 24px;
+    letter-spacing: .9px;
 }
 .font-secun{
+    letter-spacing: .9px;
     font-size: 18px;
 }
 .font-descrip{
+    letter-spacing: .9px;
     font-size: 16px;
 }
 .font-peque{
+    letter-spacing: .9px;
     font-size: 14px;
 }
 
 .precio-prin{
+    letter-spacing: .9px;
     font-size: 30px;
 }
 .font-vista-prod{
+    letter-spacing: .9px;
     font-size: 15px;
 }
 .font-foot{
+    letter-spacing: .9px;
     font-size: 15px;
 }
 
