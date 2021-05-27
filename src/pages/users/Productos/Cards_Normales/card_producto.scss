@@ -31,7 +31,7 @@
 .size-col-prin{
     min-width: 240px;
 }
-.size-col-frente{
+.size-col{
     min-width: 270px;
 }
 .contenedor-card-producto-principal{
@@ -89,14 +89,17 @@
         width: 130px;
     }
     .contenedor-imagen-producto-principal{
-        height: 250px; 
-        width: 130px;
+        height: 150px; 
+        width: 115px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .size-col{
-        min-width: 170px;
+        min-width: 10px;
+    }
+    .size-col-prin{
+        min-width: 10px;
     }
     .contenedor-titulos-productos > p {
         height: 30px;

@@ -150,7 +150,19 @@
 
   } */
   .search-nav-responsive{
-    width: 89%;
+    width: 100%;
+  }
+  .contenedor-logo{
+    // margin-left: 20%;
+    height: 75px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
   }
 }
 
